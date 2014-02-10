@@ -72,5 +72,5 @@ Different documentation can be found on the website:
 
 ## License
 
-Hoa is under the New BSD License (BSD-3-Clause). Please, see
+Hoa is under the New BSD License (BSD-3-Clause). Please, see
 [`LICENSE`](http://hoa-project.net/LICENSE).
