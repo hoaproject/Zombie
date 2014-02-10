@@ -40,7 +40,7 @@ In the `Zombie.php` file, we write the following instructions:
     // Do whatever you want here, e.g.:
     sleep(10);
     file_put_contents(
-        __DIR__ . DS . 'A Message',
+        __DIR__ . DS . 'A_Message',
         'Hello from after-life… or somewhere about!'
     );
     Hoa\Zombie\Zombie::decapitate();
@@ -62,7 +62,7 @@ And finally, we can test:
     $ php Run.php
     I guess I am sick…
 
-And 10 seconds after, we will see the `A Message` file appear with the content:
+And 10 seconds after, we will see the `A_Message` file appear with the content:
 *Hello from after-life… or somewhere about!*.
 
 ## Documentation
