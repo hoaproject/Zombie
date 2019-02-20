@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Hoa
  *
@@ -42,28 +44,21 @@ use Hoa\Consistency;
  * Class \Hoa\Zombie.
  *
  * Zombie!
- *
- * @copyright  Copyright © 2007-2017 Hoa community
- * @license    New BSD License
  */
 class Zombie
 {
     /**
      * Test if we can start a zombie.
-     *
-     * @return  bool
      */
-    public static function test()
+    public static function test(): bool
     {
         return true === function_exists('fastcgi_finish_request');
     }
 
     /**
      * Try to create a zombie.
-     *
-     * @return  bool
      */
-    public static function fork()
+    public static function fork(): bool
     {
         if (true !== static::test()) {
             throw new Exception(
@@ -77,8 +72,6 @@ class Zombie
 
     /**
      * Oh, why not decapitate?
-     *
-     * @return  void
      */
     public static function decapitate()
     {
@@ -89,8 +82,6 @@ class Zombie
 
     /**
      * Maybe, we can bludgeon the zombie?
-     *
-     * @return  void
      */
     public static function bludgeon()
     {
@@ -101,8 +92,6 @@ class Zombie
 
     /**
      * Grilled zombies, hummm!
-     *
-     * @return  void
      */
     public static function burn()
     {
@@ -113,8 +102,6 @@ class Zombie
 
     /**
      * One… two… three… … splash!
-     *
-     * @return  void
      */
     public static function explode()
     {
@@ -125,8 +112,6 @@ class Zombie
 
     /**
      * Would like a slice?
-     *
-     * @return  void
      */
     public static function cutOff()
     {
@@ -137,8 +122,6 @@ class Zombie
 
     /**
      * Whatever, really kill the zombie.
-     *
-     * @return  void
      */
     protected static function _kill()
     {
@@ -147,10 +130,8 @@ class Zombie
 
     /**
      * Get PHP's process ID.
-     *
-     * @return  int
      */
-    public static function getPid()
+    public static function getPid(): int
     {
         return getmypid();
     }
@@ -159,4 +140,4 @@ class Zombie
 /**
  * Flex entity.
  */
-Consistency::flexEntity('Hoa\Zombie\Zombie');
+Consistency::flexEntity(Zombie::class);

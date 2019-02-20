@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Hoa
  *
@@ -43,9 +45,6 @@ use Hoa\Zombie as LUT;
  * Class \Hoa\Zombie\Test\Unit\Documentation.
  *
  * Test suite of the zombie class.
- *
- * @copyright  Copyright © 2007-2017 Hoa community
- * @license    New BSD License
  */
 class Zombie extends Test\Unit\Suite
 {
